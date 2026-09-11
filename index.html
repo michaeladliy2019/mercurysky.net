@@ -5,11 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MercurySky - Software Solutions</title>
     <style>
-        body { font-family: system-ui, -apple-system, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0; }
-        header { background: #0f172a; color: white; padding: 3rem 1rem; text-align: center; }
+        body { font-family: system-ui, -apple-system, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0; background-color: #f8fafc; }
+        header { background: #0f172a; color: white; padding: 4rem 1rem; text-align: center; }
+        header h1 { margin: 0; font-size: 2.5rem; }
+        header p { color: #94a3b8; font-size: 1.1rem; margin-top: 0.5rem; }
         .container { max-width: 900px; margin: 0 auto; padding: 2rem 1rem; }
-        footer { background: #f8fafc; border-top: 1px solid #e2e8f0; padding: 2rem 1rem; margin-top: 4rem; text-align: center; font-size: 0.9rem; color: #64748b; }
-        .contact-info { margin-top: 1rem; font-size: 0.95rem; }
+        
+        section { background: #ffffff; padding: 2rem; border-radius: 8px; margin-bottom: 2rem; border: 1px solid #e2e8f0; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        h2 { color: #0f172a; margin-top: 0; border-bottom: 2px solid #38bdf8; padding-bottom: 0.5rem; display: inline-block; }
+
+        /* Grid Layouts */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
+        .card { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 1.5rem; }
+        .card h3 { margin-top: 0; color: #0f172a; }
+
+        /* Services Grid */
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+        .service-item { background: #f1f5f9; border-left: 4px solid #0f172a; padding: 1rem; border-radius: 0 6px 6px 0; }
+        .service-item h4 { margin: 0 0 0.5rem 0; color: #0f172a; }
+        .service-item p { margin: 0; font-size: 0.9rem; color: #475569; }
+
+        /* Contact Section Grid */
+        .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 1.5rem; }
+        
+        /* Form Styling */
+        .contact-form { display: flex; flex-direction: column; gap: 1rem; }
+        .form-group { display: flex; flex-direction: column; gap: 0.3rem; }
+        .form-group label { font-size: 0.9rem; font-weight: 600; color: #334155; }
+        .form-group input, .form-group textarea { width: 100%; padding: 0.75rem; border: 1px solid #cbd5e1; border-radius: 6px; font-family: inherit; box-sizing: border-box; }
+        .form-group input:focus, .form-group textarea:focus { outline: none; border-color: #0f172a; }
+        .submit-btn { background: #0f172a; color: white; border: none; padding: 0.8rem 1.5rem; border-radius: 6px; font-weight: bold; cursor: pointer; transition: background 0.2s; }
+        .submit-btn:hover { background: #1e293b; }
+
+        /* Contact Direct Info */
+        .direct-info p { margin: 0.5rem 0; font-size: 0.95rem; }
+        .direct-info strong { color: #0f172a; }
+        
+        footer { background: #0f172a; color: #cbd5e1; padding: 2rem 1rem; margin-top: 4rem; text-align: center; font-size: 0.9rem; }
+        footer strong { color: #fff; }
     </style>
 </head>
 <body>
@@ -20,18 +53,111 @@
     </header>
 
     <div class="container">
-        <h2>About Us</h2>
-        <p>MercurySky provides high-performance mobile, web, and digital identity solutions tailored for modern businesses.</p>
+        <!-- About Us -->
+        <section>
+            <h2>About Us</h2>
+            <p><strong>MercurySky</strong> delivers high-performance mobile, web, e-commerce, and enterprise software solutions. We specialize in building scalable digital platforms tailored to help modern businesses operate efficiently and accelerate growth.</p>
+        </section>
+
+        <!-- Vision & Mission -->
+        <section>
+            <h2>Vision & Mission</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Our Vision</h3>
+                    <p>To be a premier technology partner empowering businesses globally through innovative software engineering, robust e-commerce architectures, and seamless digital transformation solutions.</p>
+                </div>
+                <div class="card">
+                    <h3>Our Mission</h3>
+                    <p>To drive business success by engineering secure, high-speed e-commerce platforms and custom software applications designed for high performance, reliability, and effortless scalability.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Services -->
+        <section>
+            <h2>Our Core Services</h2>
+            <div class="services-grid">
+                <div class="service-item">
+                    <h4>E-Commerce Platforms</h4>
+                    <p>Custom online stores built for high conversion, fast checkout, and seamless catalog management.</p>
+                </div>
+                <div class="service-item">
+                    <h4>Mobile & Web Apps</h4>
+                    <p>Cross-platform mobile and responsive web applications engineered for optimal user experience.</p>
+                </div>
+                <div class="service-item">
+                    <h4>API & Payment Gateways</h4>
+                    <p>Secure payment processing integrations and robust custom API development.</p>
+                </div>
+                <div class="service-item">
+                    <h4>Cloud Architecture</h4>
+                    <p>Scalable cloud setups, database design, and high-availability backend solutions.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us / Core Values -->
+        <section>
+            <h2>Why Choose Us</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Performance & Security</h3>
+                    <p>We build software with security best practices, data protection, and top-tier execution speeds at the core.</p>
+                </div>
+                <div class="card">
+                    <h3>Scalable Architecture</h3>
+                    <p>Our solutions grow alongside your business, eliminating tech debt and system friction as you scale.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Us Section -->
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Have a project in mind or need assistance with your software infrastructure? Get in touch with our team.</p>
+            
+            <div class="contact-grid">
+                <!-- Direct Details -->
+                <div class="direct-info">
+                    <h3>Get In Touch</h3>
+                    <p><strong>Email:</strong> contact@mercurysky.net</p>
+                    <p><strong>Phone:</strong> +971 54 710 0057</p>
+                    <p><strong>Office Hours:</strong> Monday – Friday, 9:00 AM – 6:00 PM (GST)</p>
+                    <br>
+                    <p><strong>Address:</strong><br>
+                    Flat 413A, AB Plaza 9, Al Nahda 1,<br>
+                    Dubai, United Arab Emirates</p>
+                </div>
+
+                <!-- Contact Form -->
+                <form class="contact-form" action="mailto:contact@mercurysky.net" method="post" enctype="text/plain">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required placeholder="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required placeholder="john@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="Project Inquiry / Consultation">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4" required placeholder="Tell us about your project requirements..."></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </section>
     </div>
 
     <footer>
-        <div class="container">
+        <div class="container" style="background: transparent; padding: 0; border: none; box-shadow: none;">
             <p><strong>Legal Name:</strong> MercurySky For Computer Systems & Communication Equipment Software Design</p>
-            <div class="contact-info">
-                <p><strong>Address:</strong> Flat 413A, AB Plaza 9, Al Nahda 1, Dubai, UAE</p>
-                <p><strong>Email:</strong> contact@mercurysky.net | <strong>Phone:</strong> +971 54 710 0057</p>
-            </div>
-            <p style="margin-top: 1.5rem;">&copy; 2026 MercurySky. All Rights Reserved.</p>
+            <p style="margin-top: 1rem; color: #64748b;">&copy; 2026 MercurySky. All Rights Reserved.</p>
         </div>
     </footer>
 
